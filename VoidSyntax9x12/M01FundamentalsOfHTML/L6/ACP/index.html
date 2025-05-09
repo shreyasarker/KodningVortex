@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Application Form</title>
+</head>
+
+<body>
+
+    <h2>Job Application Form</h2>
+
+    <form oninput="expOutput.value = parseInt(years.value) + ' years'">
+
+        <fieldset>
+            <legend>Applicant Information</legend>
+            <br>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Create Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label>Preferred Job Type:</label><br>
+            <input type="radio" id="fulltime" name="jobtype" value="Full-time">
+            <label for="fulltime">Full-time</label><br>
+            <input type="radio" id="parttime" name="jobtype" value="Part-time">
+            <label for="parttime">Part-time</label><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Experience</legend>
+            <br>
+            <label for="department">Choose Department:</label><br>
+            <select id="department" name="department">
+                <option value="engineering">Engineering</option>
+                <option value="marketing">Marketing</option>
+                <option value="hr">Human Resources</option>
+                <option value="design">Design</option>
+            </select><br><br>
+
+            <label for="years">Years of Experience:</label><br>
+            <input type="number" id="years" name="years" min="0"><br>
+            Total Experience: <output name="expOutput" for="years">0 years</output><br><br>
+
+            <label>Skills:</label><br>
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label><br>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label><br>
+
+            <input type="checkbox" id="js" name="skills" value="JavaScript">
+            <label for="js">JavaScript</label><br><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit Application">
+
+    </form>
+
+</body>
+
+</html>
