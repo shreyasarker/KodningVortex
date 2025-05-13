@@ -54,7 +54,7 @@
         android:id="@+id/spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absolut/eX="1dp"
         tools:layout_editor_absoluteY="68dp" />
 
     <ImageView
@@ -64,5 +64,29 @@
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="3dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="692dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="73dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="149dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
