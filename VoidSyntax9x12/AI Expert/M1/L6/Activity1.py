@@ -10,7 +10,7 @@ import sys
 init(autoreset=True)
 
 # Load and preprocess the dataset
-def load_data(file_path='VoidSyntax9x12/AI Expert/L6/imdb_top_1000.csv'):
+def load_data(file_path='VoidSyntax9x12/AI Expert/M1/L6/imdb_top_1000.csv'):
     try:
         df = pd.read_csv(file_path)
         df['combined_features'] = df['Genre'].fillna('') + ' ' + df['Overview'].fillna('')
