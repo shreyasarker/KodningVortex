@@ -3,18 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FreshBite Restaurant</title>
+    <title>Chef's Kitchen</title>
 
     <!-- Internal CSS -->
     <style>
-        h1 {
+        * {
+            font-size: 16px;
+        }
+
+        h1,
+        p {
+            color: #2c3e50;
+        }
+
+        .tagline {
             color: #d35400;
-            font-size: 36px;
             font-weight: bold;
         }
 
-        .intro {
-            color: #2c3e50;
+        #about {
+            color: #16a085;
             font-size: 18px;
         }
     </style>
@@ -25,17 +33,17 @@
 
 <body>
 
-    <h1>Welcome to FreshBite</h1>
+    <h1>Welcome to Chef's Kitchen</h1>
 
-    <p class="intro">Delicious meals made with love and the freshest ingredients.</p>
+    <p class="tagline">Master the art of cooking with our expert chefs!</p>
 
-    <p style="color: green; font-size: 16px; font-weight: bold;">
-        Special Today: Grilled Lemon Chicken with Herbs!
-    </p>
+    <p id="about">We offer hands-on classes for beginners and advanced cooks alike.</p>
 
-    <div class="footer">
-        © 2025 FreshBite Restaurant
-    </div>
+    <p style="color: darkred; font-weight: bold;">Next class: Italian Pasta Workshop (July 20)</p>
+
+    <footer class="footer">
+        © 2025 Chef's Kitchen Cooking School
+    </footer>
 
 </body>
 
