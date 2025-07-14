@@ -1,0 +1,30 @@
+/* Universal Selector */
+* {
+    font-family: cursive;
+}
+
+/* External CSS */
+h5 {
+    color: purple;
+}
+
+/* Element Selector */
+h4 {
+    color: palevioletred;
+}
+
+/* Class Selector */
+.myclass {
+    color: olivedrab;
+}
+
+/* ID Selector */
+#myid {
+    color: darkgoldenrod;
+}
+
+/* Group Selector */
+h5,
+p {
+    color: mediumpurple;
+}
