@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    background-color: #1e1e1e;
+}
+
+h1 {
+    color: #6cc24a;
+}
+
+/* Advanced selector: child selector */
+ul>li {
+    font-weight: bold;
+}
+
+/* Pseudo-class: hover */
+ul li:hover {
+    color: lightgreen;
+}
+
+/* Pseudo-class: nth-child */
+ul li:nth-child(4) {
+    background-color: #2a2a2a;
+}
+
+/* Advanced selector: sibling selector */
+h2+p {
+    background-color: #2f2f2f;
+}
+
+/* Link styles */
+a {
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+/* Pseudo-class: hover for link */
+a:hover {
+    color: beige;
+}
+
+/* Pseudo-element: first-letter */
+p::first-letter {
+    font-size: 30px;
+}
+
+/* Pseudo-element: before */
+ul li::before {
+    content: "🌿 ";
+}
+
+/* Pseudo-element: after */
+a::after {
+    content: " 📸";
+}

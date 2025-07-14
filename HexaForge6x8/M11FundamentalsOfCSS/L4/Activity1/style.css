@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    background-color: black;
+}
+
+h1 {
+    color: rgb(91, 84, 222);
+}
+
+/*Advance selector : child-selector*/
+ul>li {
+    font-weight: bold;
+}
+
+/*Pseudoclass : hover*/
+ul li:hover {
+    color: gold;
+}
+
+/*Pseudoclass : nth-child*/
+ul li:nth-child(4) {
+    background-color: rgb(66, 66, 76);
+}
+
+/*Advance selector : sibling selector*/
+h2+p {
+    background-color: rgb(66, 66, 76);
+}
+
+a {
+    color: burlywood;
+    text-decoration: none;
+}
+
+/*Pseudoclass : hover*/
+a:hover {
+    color: beige;
+}
+
+/*Pseudo-Elements :: first-letter*/
+p::first-letter {
+    font-size: 30px;
+}
+
+/*Pseudo-Elements :: before*/
+ul li::before {
+    content: "🚀 ";
+}
+
+/*Pseudo-Elements :: after*/
+a::after {
+    content: " 🔗";
+}
