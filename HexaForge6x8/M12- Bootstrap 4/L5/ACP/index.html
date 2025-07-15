@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        img {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center text-primary">📚 City Library</h1>
+
+        <!-- Spinner loading new books -->
+        <div class="d-flex justify-content-center mb-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading new arrivals...</span>
+            </div>
+        </div>
+
+        <!-- Book Cards -->
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="The Time Keeper.jpeg" class="card-img-top" alt="Book 1">
+                    <div class="card-body">
+                        <h5 class="card-title">The Time Keeper</h5>
+                        <p class="card-text">A thought-provoking novel about time and how we value it. Author: Mitch
+                            Albom</p>
+                        <a href="#" class="btn btn-primary btn-sm">Borrow</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Becoming.jpeg" class="card-img-top" alt="Book 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Becoming</h5>
+                        <p class="card-text">A powerful memoir by Michelle Obama, sharing her journey and wisdom.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Borrow</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Atomic Habits.jpg" class="card-img-top" alt="Book 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Atomic Habits</h5>
+                        <p class="card-text">An easy & proven way to build good habits & break bad ones. Author: James
+                            Clear</p>
+                        <a href="#" class="btn btn-primary btn-sm">Borrow</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Book pages" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="text-center text-muted mt-5 p-3 border-top">
+            © 2025 City Library. Read. Learn. Grow.
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
