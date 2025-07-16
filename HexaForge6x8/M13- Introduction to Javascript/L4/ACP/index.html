@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sum of Arguments</title>
+</head>
+
+<body>
+    <h3>Sum of numbers using Arguments Object.</h3>
+    <p id="sum"></p>
+
+    <h3>Trigonometric values with Math Object.</h3>
+    <p id="sin45"></p>
+    <p id="cos45"></p>
+    <p id="tan45"></p>
+
+    <script>
+        function findSum() {
+            var sum = 0;
+
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        document.getElementById("sum").innerHTML = findSum(6, 4, 9, 3);
+
+        document.getElementById("sin45").innerHTML = "Sin 45 is: " + Math.sin(45);
+        document.getElementById("cos45").innerHTML = "Cos 45 is: " + Math.cos(45);
+        document.getElementById("tan45").innerHTML = "Tan 45 is: " + Math.tan(45);
+    </script>
+</body>
+
+</html>

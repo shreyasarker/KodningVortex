@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    border: 2px solid rgb(114, 108, 108);
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+#validation_message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <p>Perform all Operations using JavaScript</p>
+
+    <p id="addition_result"></p>
+    <p id="subtraction_result"></p>
+    <p id="multiplication_result"></p>
+    <p id="division_result"></p>
+    <p id="modulus_result"></p>
+
+    <script>
+        var num1 = 20;
+        var num2 = 4;
+
+        var addition_result = num1 + num2;
+        var subtraction_result = num1 - num2;
+        var multiplication_result = num1 * num2;
+        var division_result = num1 / num2;
+        var modulus_result = num1 % num2;
+
+        document.getElementById("addition_result").innerHTML = "The addition is: " + addition_result;
+        document.getElementById("subtraction_result").innerHTML = "The difference is: " + subtraction_result;
+        document.getElementById("multiplication_result").innerHTML = "The product is: " + multiplication_result;
+        document.getElementById("division_result").innerHTML = "The quotient is: " + division_result;
+        document.getElementById("modulus_result").innerHTML = "The remainder is: " + modulus_result;
+    </script>
+</body>
+
+</html>

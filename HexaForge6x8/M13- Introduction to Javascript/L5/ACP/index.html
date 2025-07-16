@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Data Structure and Array</title>
+</head>
+
+<body>
+    <h2>Object Data Structure and Array</h2>
+
+    <script>
+        var student = {
+            name: "Ripley",
+            age: 11,
+            grade: 7,
+            hobby: "Drawing",
+            life_goal: "Astronaut"
+        };
+
+        document.write("Student's info:<br>");
+        document.write("Name: " + student.name + "<br>Age: " + student.age + "<br>Grade: " + student.grade + "<br>Hobby: " + student.hobby + "<br>Life Goal: " + student.life_goal);
+
+        var colors = ["Black", "Red", "Indigo", "Orange", "Purple"];
+        document.write("<br><br>Colors:<br>");
+        document.write("First color: " + colors[0] + "<br>");
+        document.write("Second color: " + colors[1] + "<br>");
+        document.write("Third color: " + colors[2] + "<br>");
+        document.write("Fourth color: " + colors[3] + "<br>");
+        document.write("Fifth color: " + colors[4] + "<br>");
+
+        document.writeln("<br>Joining with special character:<br>");
+        document.write(colors.join(" ^ "));
+
+        colors.pop();
+        document.writeln("<br><br>After popping:<br>");
+        document.write(colors);
+    </script>
+</body>
+
+</html>

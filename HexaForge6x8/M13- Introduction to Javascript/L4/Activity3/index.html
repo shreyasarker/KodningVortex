@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arguments object in JS</title>
+</head>
+
+<body>
+    <h3>Largest number using Arguments Object.</h3>
+    <p id="largest_number"></p>
+
+    <script>
+        function findMax() {
+            var max = 0;
+
+            for (var i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        document.getElementById("largest_number").innerHTML = findMax(5, 19, 4, 20, 9);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Methods in JS</title>
+</head>
+
+<body>
+    <h2>JavaScript String Methods</h2>
+    <p>Basic Methods</p>
+
+    <script>
+        var text1 = "awEsoMe";
+        document.write(text1.toUpperCase() + "<br>");
+        document.write(text1.toLowerCase() + "<br>");
+        document.write(text1.startsWith("awe") + "<br>");
+
+        var text2 = "JavaScript is the coolest programming language";
+        var regexp = new RegExp("JavaScript");
+        var result = regexp.test(text2);
+        document.write(result + "<br>");
+    </script>
+</body>
+
+</html>
