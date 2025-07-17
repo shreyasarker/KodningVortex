@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON in JS</title>
+</head>
+
+<body>
+    <h2>JSON</h2>
+
+    <p id="result"></p>
+
+    <script>
+        const student = { name: "Ellen Ripley", age: 12, grade: 7 };
+        const student_json = JSON.stringify(student);
+
+        const student_obj = JSON.parse(student_json);
+
+        document.getElementById("result").innerHTML = student_obj.name;
+    </script>
+</body>
+
+</html>

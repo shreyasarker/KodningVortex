@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map and arrange an array</title>
+</head>
+
+<body>
+    <h2>JavaScript Array Sort for Mapped Numbers</h2>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <p id="array_info"></p>
+
+    <script>
+        let numbers = [25, 12, 19, 94];
+
+        function multiplyBy50(num) {
+            return num * 50;
+        }
+
+        let mapped_array = numbers.map(multiplyBy50);
+        document.getElementById("array_info").innerHTML = mapped_array;
+
+        function ascending() {
+            mapped_array.sort(function (a, b) {
+                return a - b;
+            });
+            document.getElementById("array_info").innerHTML = mapped_array;
+        }
+
+        function descending() {
+            mapped_array.sort(function (a, b) {
+                return b - a;
+            });
+            document.getElementById("array_info").innerHTML = mapped_array;
+        }
+    </script>
+</body>
+
+</html>

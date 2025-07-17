@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validation using API</title>
+</head>
+
+<body>
+    <h2>Validation using API</h2>
+
+    <input id="number" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
+
+    <p id="message"></p>
+
+    <script>
+        function myFunction() {
+            var inputElement = document.getElementById("number");
+
+            if (!inputElement.checkValidity()) {
+                document.getElementById("message").innerHTML = inputElement.validationMessage;
+            } else {
+                document.getElementById("message").innerHTML = "Input OK";
+            }
+        } 
+    </script>
+</body>
+
+</html>

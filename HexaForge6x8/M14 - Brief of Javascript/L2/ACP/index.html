@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class in JavaScript</title>
+</head>
+
+<body>
+    <h2>JavaScript Class</h2>
+    <p id="details"></p>
+    <p id="greetings"></p>
+
+    <script>
+        class Student {
+            constructor(name) {
+                this.name = name;
+            }
+
+            static hello() {
+                return "Hello!";
+            }
+
+            present() {
+                return "My name is " + this.name;
+            }
+        }
+
+        class Grade extends Student {
+            constructor(name, grade) {
+                super(name);
+                this.grade = grade;
+            }
+
+            show() {
+                return this.present() + ", from " + this.grade;
+            }
+        }
+
+        let student = new Grade("Ripley", "Grade 6");
+        document.getElementById("details").innerHTML = student.show();
+        document.getElementById("greetings").innerHTML = Student.hello();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Asynchronous functions in JS</title>
+</head>
+
+<body>
+    <h2>Asynchronous functions in JS</h2>
+    <p id="result"></p>
+    <script>
+        async function product(a, b) {
+            let response = await a * b;
+            display(response);
+        }
+        function display(result) {
+            document.getElementById("result").innerHTML = result;
+        }
+        product(5, 20);
+    </script>
+</body>
+
+</html>

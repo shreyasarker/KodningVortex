@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evaluate variables</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">Try it</button>
+    <p id="result"></p>
+
+    <script>
+        function myFunction() {
+            const x = 10;
+            const y = 20;
+            const a = eval("x + y") + "<br>";
+            const b = eval("2 * 2") + "<br>";
+            const c = eval("y - x") + "<br>";
+
+            const result = a + b + c;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

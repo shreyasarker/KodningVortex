@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validate Inputs</title>
+
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return validateForm();">
+        Name: <input type="text" name="fname"><br><br>
+        Age: <input id="age" type="number" name="age"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["fname"].value;
+            var age = document.forms["myForm"]["age"].value;
+            var message = document.getElementById("message");
+
+            if (name === "" || age === "") {
+                message.innerHTML = "Name and Age cannot be empty.";
+                message.style.color = "red";
+                return false;
+            }
+
+            if (parseInt(age) < 18) {
+                message.innerHTML = "Age must be at least 18.";
+                message.style.color = "red";
+                return false;
+            }
+
+            message.innerHTML = "Successfully logged in.";
+            message.style.color = "green";
+            return false;
+        }
+    </script>
+</body>
+
+</html>
