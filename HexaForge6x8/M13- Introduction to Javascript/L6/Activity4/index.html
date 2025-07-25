@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Structure</title>
+</head>
+
+<body>
+    <div>
+        <h3 id="heading">DOM Structure</h3>
+        <p id="result"></p>
+        <p id="result1"></p>
+        <p id="result2"></p>
+
+    </div>
+    <script>
+        document.getElementById("result").innerHTML = document.getElementById("heading").innerHTML;
+        document.getElementById("result1").innerHTML = document.getElementById("heading").firstChild.nodeValue;
+        document.getElementById("result2").innerHTML = document.getElementById("heading").childNodes[0].nodeValue;
+    </script>
+</body>
+
+</html>
