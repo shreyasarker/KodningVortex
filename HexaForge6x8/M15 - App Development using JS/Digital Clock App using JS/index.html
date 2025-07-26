@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital Clock App using JS</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+        }
+
+        div {
+            width: 200px;
+            padding: 50px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgb(20, 19, 19), rgb(79, 79, 79), rgb(20, 19, 19));
+            text-align: center;
+            color: white;
+            font-size: 35px;
+        }
+       
+    </style>
+</head>
+
+<body>
+<div id="clock" onload="showTime()"></div>
+
+    <script>
+       function showTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session = "AM";
+
+            if (h == 0) {
+                h = 12;
+            }
+
+            if (h > 12) {
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("clock").innerText = time;
+            setTimeout(showTime, 1000);
+        }
+
+        showTime();
+    </script>
+</body>
+
+</html>

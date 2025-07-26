@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area Calculator using JS</title>
+</head>
+<body>
+    <h1>Area Calculator using JS</h1>
+
+    <script>
+        const choice = prompt("Welcome to Area Calculator. \n Please Enter your Choice: \n1. Area of Rectangle. \n2. Area of Triangle. \n3. Area of Circle. \n4. Area of Parallelogram");
+
+            if (choice == '1') {
+                const l = prompt('Enter the length');
+                const w = prompt('Enter the width');
+                const result = Number(l) * Number(w);
+                alert('The Area of Rectangle is ' + result);
+            }
+            if (choice == '2') {
+                const h = prompt('Enter the height');
+                const b = prompt('Enter the base');
+                const result = (Number(h) * Number(b)) / 2;
+                alert('The Area of Triangle is ' + result);
+            }
+
+            if (choice == '3') {
+                const r = prompt('Enter the radius');
+                const result = 3.1416 * Number(r) * Number(r);
+                alert('The Area of Circle is ' + result);
+            }
+
+            if (choice == '4') {
+                const h = prompt('Enter the height');
+                const b = prompt('Enter the corresponding base');
+                const result = Number(h) * Number(b);
+                alert('The Area of Parallelogram is ' + result);
+            }
+
+    </script>
+</body>
+</html>

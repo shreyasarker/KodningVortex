@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Counter App</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            background-color: royalblue;
+            background-image: linear-gradient(135deg, rgb(38, 59, 124), rgb(77, 106, 192), rgb(35, 57, 120));
+        }
+
+        div {
+            width: 200px;
+            padding: 50px;
+            background: rgb(2, 2, 77);
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: white;
+            padding: 10px;
+            color: rgb(2, 2, 77);
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Counter</h1>
+        <p> <span id="seconds">00</span></p>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            let sec = document.getElementById("seconds");
+            let start = document.getElementById("start");
+            let stop = document.getElementById("stop");
+            let reset = document.getElementById("reset");
+            let seconds = 0;
+            let miliseconds = 0;
+            let interval = null;
+
+            start.onclick = function () {
+                if (interval) return; // Prevent multiple intervals
+                interval = setInterval(startTimer, 10);
+            }
+
+            stop.onclick = function () {
+                clearInterval(interval);
+                interval = null;
+            }
+
+            reset.onclick = function () {
+                clearInterval(interval);
+                interval = null;
+                seconds = 0;
+                miliseconds = 0;
+                sec.innerHTML = "00";
+            }
+
+            function startTimer() {
+                miliseconds++;
+                if (miliseconds == 100) {
+                    seconds++;
+                    miliseconds = 0;
+                }
+                sec.innerHTML = (seconds < 10 ? "0" + seconds : seconds);
+            }
+        }
+    </script>
+</body>
+
+</html>

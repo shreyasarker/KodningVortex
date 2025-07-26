@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stopwatch App using JS</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            background-color: royalblue;
+            background-image: linear-gradient(135deg, rgb(38, 59, 124), rgb(77, 106, 192), rgb(35, 57, 120));
+        }
+
+        div {
+            width: 200px;
+            padding: 50px;
+            background: rgb(2, 2, 77);
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: white;
+            padding: 10px;
+            color: rgb(2, 2, 77);
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            let seconds = "00";
+            let milliseconds = "00";
+            let appendmilliseconds = document.getElementById("milliseconds");
+            let appendSeconds = document.getElementById("seconds");
+            let buttonStart = document.getElementById('button-start');
+            let buttonStop = document.getElementById('button-stop');
+            let buttonReset = document.getElementById('button-reset');
+            let Interval;
+
+            buttonStart.onclick = function () {
+
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+            }
+
+            buttonStop.onclick = function () {
+                clearInterval(Interval);
+            }
+
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                milliseconds = "00";
+                seconds = "00";
+                appendmilliseconds.innerHTML = milliseconds;
+                appendSeconds.innerHTML = seconds;
+            }
+
+            function startTimer() {
+                milliseconds++;
+
+                if (milliseconds <= 9) {
+                    appendmilliseconds.innerHTML = "0" + milliseconds;
+                }
+                if (milliseconds > 9) {
+                    appendmilliseconds.innerHTML = milliseconds;
+                }
+                if (milliseconds > 99) {
+                    seconds++;
+                    appendSeconds.innerHTML = "0" + seconds;
+                    milliseconds = 0;
+                    appendmilliseconds.innerHTML = "0" + 0;
+                }
+                if (seconds > 9) {
+                    appendSeconds.innerHTML = seconds;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

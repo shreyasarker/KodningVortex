@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perimeter Calculator</title>
+</head>
+
+<body>
+    <h1>Perimeter Calculator</h1>
+
+    <script>
+        const choice = prompt("Welcome to Perimeter Calculator. \n Please Enter your Choice: \n1. Perimeter of Circle. \n2. Perimeter of Rectangle. \n3. Perimeter of Triangle. \n4. Perimeter of Square");
+
+        if (choice == '1') {
+            const r = prompt('Enter the radius');
+            const result = 2 * 3.1416 * Number(r);
+            alert('The Perimeter of Circle is ' + result);
+        }
+        if (choice == '2') {
+            const l = prompt('Enter the length');
+            const w = prompt('Enter the width');
+            const result = 2 * (Number(l) + Number(w));
+            alert('The Perimeter of Rectangle is ' + result);
+        }
+
+        if (choice == '3') {
+            const side1 = prompt('Enter the 1st side of the triangle');
+            const side2 = prompt('Enter the 2nd side of the triangle');
+            const side3 = prompt('Enter the 3rd side of the triangle');
+            const result = Number(side1) + Number(side2) + Number(side3);
+            alert('The Perimeter of Triangle is ' + result)
+        }
+
+        if (choice == '4') {
+            const side = prompt('Enter the side of the square');
+            const result = 4 * Number(side);
+            alert('The Perimeter of Square is ' + result)
+        }
+
+    </script>
+</body>
+
+</html>

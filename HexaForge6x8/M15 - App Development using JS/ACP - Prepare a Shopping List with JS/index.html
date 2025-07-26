@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prepare a shopping list with JS</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: cadetblue;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            border: 2px solid cadetblue;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: cadetblue;
+            padding: 7px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul li span {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .delete {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Shopping List</h1>
+        <form id=form>
+            <label>Enter Item</label>
+            <input type=text id=input>
+            <button>ADD</button>
+        </form>
+        <ul id=itemList>
+        </ul>
+    </div>
+
+    <script>
+        form = document.getElementById("form")
+        input = document.getElementById("input")
+        itemList = document.getElementById("itemList")
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            createItem(input.value);
+        })
+        function createItem(value) {
+            var item = `<li><span>${value}</span>
+  <button onclick="deleteItem(this)" class="delete">Delete</button></li>`;
+            itemList.insertAdjacentHTML("beforeend", item);
+            input.focus()
+            input.value = "";
+        }
+        function deleteItem(element) {
+            element.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>
