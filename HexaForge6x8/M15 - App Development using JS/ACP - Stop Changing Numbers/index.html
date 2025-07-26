@@ -27,27 +27,25 @@
         let num;
         let stop = true;
         let t;
-        let random = Math.random() * 100;
-        random = Math.floor(random);
+
         function change() {
-            let random = Math.random() * 100;
-            random = Math.floor(random);
+            let random = Math.floor(Math.random() * 100);
             num.innerHTML = random;
         }
 
         function toggle() {
-            if (random % 2 == 1 && stop == true) {
+            if (stop) {
                 stop = false;
                 t = setInterval(change, 100);
-            }
-            else {
+            } else {
                 clearInterval(t);
                 stop = true;
             }
         }
+
         window.onload = function () {
             num = document.getElementById("num");
-            toggle();
+            change();
         }
     </script>
 </body>

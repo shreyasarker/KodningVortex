@@ -66,15 +66,15 @@
     </div>
 
     <script>
-        form = document.getElementById("form")
-        input = document.getElementById("input")
-        itemList = document.getElementById("itemList")
+        let form = document.getElementById("form")
+        let input = document.getElementById("input")
+        let itemList = document.getElementById("itemList")
         form.addEventListener("submit", function (event) {
             event.preventDefault();
             createItem(input.value);
         })
         function createItem(value) {
-            var item = `<li><span>${value}</span>
+            let item = `<li><span>${value}</span>
   <button onclick="deleteItem(this)" class="delete">Delete</button></li>`;
             itemList.insertAdjacentHTML("beforeend", item);
             input.focus()

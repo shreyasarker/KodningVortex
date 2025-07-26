@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Random Colors</title>
+</head>
+
+<body>
+    <div id="background">
+        <h1>Changing Background Color</h1>
+        <button onclick="clickFunction()">Click Me</button>
+    </div>
+
+    <script>
+        function clickFunction() {
+            let bg = document.getElementById('background');
+            console.log(bg);
+            let colors = ["red", "green", "lightblue", "orange", "violet", "teal", "rainbow", "cadetblue"];
+
+            const colorIndex = parseInt(Math.random() * colors.length);
+            bg.style.backgroundColor = colors[colorIndex];
+        }
+    </script>
+</body>
+
+</html>

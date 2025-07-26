@@ -67,9 +67,9 @@
     </div>
 
     <script>
-        var form = document.getElementById("form");
-        var input = document.getElementById("input");
-        var itemList = document.getElementById("itemList");
+        let form = document.getElementById("form");
+        let input = document.getElementById("input");
+        let itemList = document.getElementById("itemList");
 
         form.addEventListener("submit",
             function (event) {
@@ -78,7 +78,7 @@
             })
 
         function createItem(value) {
-            var item = `<li><span>${value}</span>
+            let item = `<li><span>${value}</span>
 	<button onclick="deleteElement(this)" class="delete">Delete</button> </li>`;
             itemList.insertAdjacentHTML("beforeend", item);
             input.value = "";

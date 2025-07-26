@@ -2,24 +2,26 @@
 <html>
 
 <head>
-    <title>Change Random Colors</title>
+    <title>Palindrome App using JS</title>
 </head>
 
 <body>
-    <div id="background">
-        <h1>Changing Background Color</h1>
-        <button onclick="clickFunction()">Click Me</button>
-    </div>
+    <h1>Palindrome App using JS</h1>
 
     <script>
-        function clickFunction() {
-            let bg = document.getElementById('background');
+        function isPalindrome(text) {
+            const input = text.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+            const reversedInput = input.split('').reverse().join('');
 
-            let colors = ["red", "green", "lightblue", "orange", "violet", "brown", "rainbow", "teal", "cadetblue", "seagreen"];
-
-            const colorIndex = parseInt(Math.random() * colors.length);
-            bg.style.backgroundColor = colors[colorIndex];
+            if (input === reversedInput) {
+                document.write("<div>" + text + " is a palindrome <div>");
+            }
+            else {
+                document.write("<div>" + text + " is not a palindrome <div>");
+            }
         }
+
+        isPalindrome("madam");
     </script>
 </body>
 
