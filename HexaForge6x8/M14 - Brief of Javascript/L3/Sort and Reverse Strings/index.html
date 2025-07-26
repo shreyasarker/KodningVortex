@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sort and Reverse String</title>
+</head>
+
+<body>
+    <h2>JavaScript Array Sort</h2>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <p id="array_info"></p>
+
+    <script>
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("array_info").innerHTML = fruits;
+
+        function ascending() {
+            fruits.sort();
+            document.getElementById("array_info").innerHTML = fruits;
+        }
+
+        function descending() {
+            fruits.reverse();
+            document.getElementById("array_info").innerHTML = fruits;
+        }
+    </script>
+</body>
+
+</html>

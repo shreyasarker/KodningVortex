@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search and Replace String</title>
+</head>
+
+<body>
+    <h2>Search and Replace String</h2>
+
+    <p id="search_result"></p>
+    <p id="replace_result"></p>
+
+    <script>
+        const str = "Hi, hello how are doing for the day";
+        const search_position = str.search("doing");
+        const txt = str.replace("how are", "how are you")
+        document.getElementById("search_result").innerHTML = search_position;
+        document.getElementById("replace_result").innerHTML = txt;
+
+    </script>
+</body>
+
+</html>
