@@ -1,0 +1,221 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #004d66;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Slider */
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    min-height: 300px;
+}
+
+section h1,
+section h2 {
+    margin-bottom: 20px;
+    color: #004d66;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Destinations Cards Section */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #004d66;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #004d66;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006080;
+}
+
+/* Footer */
+footer {
+    background-color: #004d66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

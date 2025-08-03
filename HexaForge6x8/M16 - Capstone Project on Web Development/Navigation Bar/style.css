@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    background-color: darkblue;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.navbar a:hover,
+.navbar .active {
+    background-color: white;
+    color: darkblue;
+}
+
+.navbar a.right {
+    float: right;
+}
