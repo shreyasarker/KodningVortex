@@ -1,0 +1,2 @@
+I am the content of file1.
+I am the content of file2.
