@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Location Finder App</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Leaflet (Free) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <h1>Free Map Finder 🗺️</h1>
+
+    <form method="POST">
+        <input type="text" name="location" placeholder="Enter location (e.g., Madurai)" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if data %}
+    <p><b>Place:</b> {{ data.location }}</p>
+    <p><b>Latitude:</b> {{ data.lat }} | <b>Longitude:</b> {{ data.lon }}</p>
+
+    <div id="map"></div>
+
+    <script>
+        const lat = {{ data.lat }};
+        const lon = {{ data.lon }};
+
+        // Create map
+        const map = L.map('map').setView([lat, lon], 13);
+
+        // OpenStreetMap tiles (free)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Marker
+        L.marker([lat, lon]).addTo(map)
+            .bindPopup("{{ data.location }}")
+            .openPopup();
+    </script>
+    {% endif %}
+</body>
+
+</html>

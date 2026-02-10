@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="card">
+        <h2>Register</h2>
+
+        {% if msg %}
+        <p class="msg">{{ msg }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <input name="username" type="text" placeholder="Username" required>
+            <input name="password" type="password" placeholder="Password" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already registered? <a href="/login">Login</a></p>
+    </div>
+</body>
+
+</html>

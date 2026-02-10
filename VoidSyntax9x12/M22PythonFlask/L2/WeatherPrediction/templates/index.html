@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Weather Checker</h1>
+
+    <form action="/getweather" method="POST">
+        <input type="text" name="city" placeholder="Enter city name">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if data %}
+    <h2>{{ data.location }}</h2>
+    <p>Country: {{ data.country_code }}</p>
+    <p>Temp: {{ data.temp }} °C</p>
+    <p>Condition: {{ data.condition }}</p>
+    {% elif error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+</body>
+
+</html>
